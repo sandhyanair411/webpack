@@ -1,3 +1,4 @@
+const { type } = require("os");
 const path = require("path");
 
 module.exports = {
@@ -7,4 +8,12 @@ module.exports = {
     path: path.resolve(__dirname,"./dist"),
   },
   mode: "none",
+  module:{
+    rules:[
+        {
+            test: /\.(png|jpg|jpeg)$/,
+            type: 'asset/resource'
+        }
+    ]
+  }
 };
