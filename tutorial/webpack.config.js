@@ -24,6 +24,10 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
+        test: /\.scss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
         test: /\.(png|jpg|jpeg)$/,
         type: "asset/inline",
         parser: {
