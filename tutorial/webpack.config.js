@@ -20,6 +20,10 @@ module.exports = {
         type: "asset/source",
       },
       {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.(png|jpg|jpeg)$/,
         type: "asset/inline",
         parser: {
